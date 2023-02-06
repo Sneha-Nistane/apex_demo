@@ -1,0 +1,16 @@
+<apex:page standardController="Account" extensions="IntegrationJsonPulling_CX">
+  <apex:form >
+      <apex:pageBlock title="Account Details">
+          <apex:pageBlockSection title="Account Listing">
+              <apex:actionPoller interval="10" action="{!showRecords}" reRender="countText,outputPanel"/>
+              <apex:outputText value="{!count}" id="countText"> Count of Account Records </apex:outputText>
+              <apex:outputPanel id="outputPanel">
+                  <apex:pageblockTable value="{!ListAcc}" var="Acc">
+                  <apex:column value="{!Acc.Name}"/>
+                   <apex:column value="{!Acc.Rating}"/>
+              </apex:pageblockTable>
+              </apex:outputPanel>
+           </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

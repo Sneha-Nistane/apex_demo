@@ -1,0 +1,23 @@
+<apex:page standardController="Account" extensions="VFAccountActionJavascript_CX" id="pg">
+<script>
+    function checkAccName(){
+        var name = document.getElementById('{!$Component.pg.fr1.pb1.pbs1.accName}').value;
+        if(name == '' || name == NULL){
+            alert("Please Enter Account Name");
+        }else{
+            AF1();
+        }
+    }
+</script>
+  <apex:form id="fr1">
+      <apex:pageBlock title="Account Information" id="pb1">
+          <apex:pageBlockSection title="Account Details" id="pbs1">
+              <apex:inputField value="{!Account.Name}" id="accName"/>
+           </apex:pageBlockSection>
+           <apex:pageBlockButtons location="bottom">
+               <apex:commandButton value="Save" oncomplete="checkAccName()" id="cb1" />
+           </apex:pageBlockButtons>
+      </apex:pageBlock>
+      <apex:actionFunction name="AF1" action="{!save}" />
+  </apex:form>
+</apex:page>

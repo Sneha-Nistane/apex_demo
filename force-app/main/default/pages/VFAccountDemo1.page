@@ -1,0 +1,18 @@
+<apex:page standardController="Account" extensions="VFAccountDemo1_CX">
+  <apex:form >
+      <apex:pageBlock title="New Account">
+          <apex:pageMessages id="showmsg"></apex:pageMessages>
+          <apex:pageBlockSection title="Account Information">
+              <apex:inputField value="{!Account.name}"/>
+              <apex:inputField value="{!Account.accountnumber}"/>
+              <apex:inputField value="{!Account.Rating}"/>
+              <apex:inputField value="{!Account.Industry}"/>
+              <apex:inputField value="{!Account.Type}"/>
+              <apex:inputField value="{!Account.SLA__c}"/>
+          </apex:pageBlockSection>
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Save" action="{!save}"/>
+          </apex:pageBlockButtons>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

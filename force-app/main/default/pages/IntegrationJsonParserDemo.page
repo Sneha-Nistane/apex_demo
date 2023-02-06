@@ -1,0 +1,8 @@
+<apex:page controller="IntegrationJsonParserDemo">
+  <apex:form >
+      <apex:dataTable value="{!result}" var="A" cellpadding="10" frame="border">
+          <apex:column value="{!a}" headerValue="Key"/>
+           <apex:column value="{!result[a]}" headerValue="Token"/>
+      </apex:dataTable>
+  </apex:form>
+</apex:page>

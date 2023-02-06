@@ -1,0 +1,13 @@
+<apex:page standardController="Student_Detail__c" extensions="VFStudentDetail_CX">
+  <apex:form >
+      <apex:pageBlock title="Student Details"> 
+          <apex:pageBlockSection title="Student Basic Information">
+              <apex:inputField value="{!Student_Detail__c.First_Name__c}"/>
+              <apex:inputField value="{!Student_Detail__c.Gender__c}"/>
+          </apex:pageBlockSection>
+          <apex:pageBlockButtons location="bottom">
+              <apex:commandButton value="Save" action="{!save}"/>
+          </apex:pageBlockButtons>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

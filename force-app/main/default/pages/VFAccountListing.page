@@ -1,0 +1,14 @@
+<apex:page standardController="Account" recordSetVar="AccList" extensions="VFAccountListing_CX">
+  <apex:form >
+      <apex:pageBlock title="Account Information">
+          <apex:pageBlockSection title="Account All Data">
+              <apex:pageBlockTable value="{!AccList}" var="Acc">
+                  <apex:column value="{!Acc.Name}"/>
+                  <apex:column value="{!Acc.AccountNumber}"/>
+                  <apex:column value="{!Acc.Rating}"/>
+                  <apex:column value="{!Acc.Type}"/>
+              </apex:pageBlockTable>
+          </apex:pageBlockSection>
+       </apex:pageBlock>
+  </apex:form>
+</apex:page>
